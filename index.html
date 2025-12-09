@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & Meta -->
+    <title>Mundo Bicho - Cuidado, Amor e Responsabilidade</title>
+    <meta name="description"
+        content="Clínica Veterinária Mundo Bicho. Consultas, Vacinas, Cirurgias e o exclusivo Banho Ozonizado. Cuidado humanizado para o seu melhor amigo." />
+
+    <!-- Google Fonts: Raleway (Regular 400, ExtraBold 800) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header id="main-header">
+            <div class="container header-content">
+                <a href="#" class="logo-wrapper">
+                    <img src="./src/logo-laranja.webp" alt="Mundo Bicho Logo" class="logo-img">
+                    <div class="logo-text">
+                        <span class="brand-name">Mundo Bicho</span>
+                        <span class="brand-subtitle">Clínica Veterinária</span>
+                    </div>
+                </a>
+
+                <nav id="main-nav">
+                    <ul class="nav-links">
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#contact" class="btn-cta-small">Agendar</a></li>
+                    </ul>
+                </nav>
+
+                <button id="mobile-menu-btn" aria-label="Abrir menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="container hero-container">
+                    <div class="hero-text">
+                        <!-- Eyebrow Badge -->
+                        <div class="hero-badge">
+                            Clínica Veterinária em <span class="text-blue">Curitiba</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            <span class="title-regular-orange">Cuidado, Amor e</span> <br>
+                            <span class="title-bold-blue">Responsabilidade</span>
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Seu melhor amigo merece o melhor tratamento.
+                            Da medicina veterinária de ponta ao carinho que ele sente em casa.
+                        </p>
+
+                        <!-- Features/Tags Row (Moved Above Buttons) -->
+                        <div class="hero-features">
+                            <div class="feature-item">
+                                <i data-lucide="map-pin" class="icon-lucide"></i> Localizado em Santa Felicidade
+                            </div>
+                            <div class="feature-item">
+                                <i data-lucide="file-badge-2" class="icon-lucide"></i> Profissionais qualificados
+                            </div>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn-primary">Agendar Horário</a>
+                            <a href="#services" class="btn-secondary">Ver Serviços</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image-wrapper">
+                        <img src="./src/hero-mascot.webp" alt="Cão e Gato felizes" class="hero-mascot">
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Services Section -->
+        <section id="services">
+
+
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow-text">Excelência Veterinária</div>
+                    <h2 class="section-title">Nossos <span class="highlight">Serviços</span></h2>
+                    <p class="section-subtitle">Tudo que seu pet precisa em um só lugar, com o carinho que ele merece.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service Card: Consultas -->
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <h3>Consultas</h3>
+                        <p>Atendimento clínico geral e especializado para cães e gatos.</p>
+                    </div>
+
+                    <!-- Service Card: Vacinas -->
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i data-lucide="syringe"></i>
+                        </div>
+                        <h3>Vacinas Importadas</h3>
+                        <p>Imunização completa com as melhores vacinas do mercado.</p>
+                    </div>
+
+                    <!-- Service Card: Cirurgias -->
+                    <div class="service-card">
+                        <div class="card-icon">
+                            <i data-lucide="scissors"></i>
+                        </div>
+                        <h3>Cirurgias</h3>
+                        <p>Centro cirúrgico equipado e monitoramento anestésico constante.</p>
+                    </div>
+
+                    <!-- Service Card: Banho Ozonizado (Highlighted) -->
+                    <div class="service-card highlight-card">
+                        <div class="card-badge">Exclusivo</div>
+                        <div class="card-icon">
+                            <i data-lucide="sparkles"></i>
+                        </div>
+                        <h3>Banho Ozonizado</h3>
+                        <p>Tecnologia que trata a pele, elimina odores e relaxa seu pet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section (Dr. Allan) -->
+        <section id="sobre">
+            <div class="container">
+                <h2 class="section-title">Conheça o <span class="highlight">Dr. Allan</span></h2>
+
+                <div class="about-grid">
+                    <!-- Photo -->
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80"
+                            alt="Dr. Allan Diego Ferracin de Moraes" class="about-photo">
+                    </div>
+
+                    <!-- Bio Text -->
+                    <div class="about-text">
+                        <h3>Dr. Allan Diego Ferracin de Moraes</h3>
+                        <p>
+                            Formado em Medicina Veterinária, com especialização em clínica
+                            médica de pequenos animais. Com anos de experiência no cuidado
+                            de cães e gatos, o Dr. Allan dedica-se a proporcionar atendimento
+                            personalizado e humanizado para cada pet.
+                        </p>
+
+                        <ul class="about-credentials">
+                            <li><i data-lucide="check"></i> Experiência comprovada em clínica veterinária</li>
+                            <li><i data-lucide="check"></i> Especializado em pequenos animais (cães e gatos)</li>
+                            <li><i data-lucide="check"></i> Atendimento humanizado e dedicado</li>
+                        </ul>
+
+                        <blockquote class="about-quote">
+                            "Cada animal merece ser tratado com carinho, respeito e
+                            dedicação profissional."
+                            <cite>- Dr. Allan Moraes</cite>
+                        </blockquote>
+                        <div class="about-values-compact">
+                            <div class="value-item" title="Confiança: Transparência em diagnósticos">
+                                <i data-lucide="shield-check" class="val-icon"></i>
+                                <span>Confiança</span>
+                            </div>
+                            <div class="value-item" title="Acessibilidade: Qualidade a preços justos">
+                                <i data-lucide="hand-coins" class="val-icon"></i>
+                                <span>Acessibilidade</span>
+                            </div>
+                            <div class="value-item" title="Atenção: Atendimento personalizado">
+                                <i data-lucide="heart" class="val-icon"></i>
+                                <span>Atenção</span>
+                            </div>
+                            <div class="value-item" title="Respeito: Cuidado com dedicação">
+                                <i data-lucide="paw-print" class="val-icon"></i>
+                                <span>Respeito</span>
+                            </div>
+                            <div class="value-item" title="Profissionalismo: Formação comprovada">
+                                <i data-lucide="graduation-cap" class="val-icon"></i>
+                                <span>Profissionalismo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+    </div>
+    <!-- Differentials Section -->
+    <section id="diferenciais">
+        <div class="container">
+            <h2 class="section-title">Por que <span class="highlight">Escolher-nos</span></h2>
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <i data-lucide="award" class="diff-icon icon-orange"></i>
+                    <h3>Tecnologia de Ponta</h3>
+                    <p>Equipamentos modernos para diagnósticos precisos e tratamentos eficazes.</p>
+                </div>
+                <div class="diff-card">
+                    <i data-lucide="clock" class="diff-icon icon-blue"></i>
+                    <h3>Agilidade</h3>
+                    <p>Atendimento rápido e eficiente para reduzir o estresse do seu pet.</p>
+                </div>
+                <div class="diff-card">
+                    <i data-lucide="shield-check" class="diff-icon icon-orange"></i>
+                    <h3>Segurança Total</h3>
+                    <p>Protocolos rigorosos de higiene e controle para proteção completa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos">
+        <div class="container">
+            <h2 class="section-title">O que dizem os <span class="highlight">Tutores</span></h2>
+            <div class="testimonials-grid">
+                <div class="testi-card">
+                    <i data-lucide="quote" class="quote-icon"></i>
+                    <div class="stars">
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                    </div>
+                    <p>"O Dr. Allan é incrível! Cuidou do Thor com tanto carinho que ele nem queria ir embora.
+                        Recomendo de olhos fechados!"</p>
+                    <div class="testi-author">
+                        <strong>Mariana Silva</strong>
+                        <span>Tutora do Thor (Golden)</span>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <i data-lucide="quote" class="quote-icon"></i>
+                    <div class="stars">
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                    </div>
+                    <p>"A clínica é impecável e o banho ozonizado fez milagres na alergia da minha gatinha.
+                        Melhor clínica de Curitiba."</p>
+                    <div class="testi-author">
+                        <strong>Roberto Mendes</strong>
+                        <span>Tutor da Luna (Sialata)</span>
+                    </div>
+                </div>
+                <div class="testi-card">
+                    <i data-lucide="quote" class="quote-icon"></i>
+                    <div class="stars">
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                        <i data-lucide="star" class="star-fill"></i>
+                    </div>
+                    <p>"Transparência total nos exames e tratamento. Sinto muita confiança em deixar meus
+                        bichinhos lá."</p>
+                    <div class="testi-author">
+                        <strong>Carla Souza</strong>
+                        <span>Tutora do Bob (Poodle)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section id="galeria">
+        <div class="container">
+            <h2 class="section-title">Nossa <span class="highlight">Estrutura</span></h2>
+            <div class="gallery-grid">
+                <!-- Item 1: Recepção -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=400&q=80"
+                        alt="Recepção Moderna" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="map-pin"></i>
+                        <span>Recepção</span>
+                    </div>
+                </div>
+                <!-- Item 2: Consultório -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=400&q=80"
+                        alt="Consultório Veterinário" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="stethoscope"></i>
+                        <span>Consultório 1</span>
+                    </div>
+                </div>
+                <!-- Item 3: Banho e Tosa -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=400&q=80"
+                        alt="Área de Banho e Tosa" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="scissors"></i>
+                        <span>Banho e Tosa</span>
+                    </div>
+                </div>
+                <!-- Item 4: Gatos -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?auto=format&fit=crop&w=400&q=80"
+                        alt="Gatinho Feliz" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="heart"></i>
+                        <span>Sala de Gatos</span>
+                    </div>
+                </div>
+                <!-- Item 5: Internação -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=400&q=80"
+                        alt="Área de Internação" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="smile"></i>
+                        <span>Internação</span>
+                    </div>
+                </div>
+                <!-- Item 6: Centro Cirúrgico (Large) -->
+                <div class="gallery-item large">
+                    <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=800&q=80"
+                        alt="Centro Cirúrgico Equipado" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="activity"></i>
+                        <span>Centro Cirúrgico</span>
+                    </div>
+                </div>
+                <!-- Item 7: Laboratório (NEW) -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=400&q=80"
+                        alt="Laboratório de Análises" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="file-badge-2"></i>
+                        <span>Laboratório</span>
+                    </div>
+                </div>
+                <!-- Item 8: Pet Shop/Farmácia (NEW) -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?auto=format&fit=crop&w=400&q=80"
+                        alt="Pet Shop e Farmácia" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="hand-coins"></i>
+                        <span>Farmácia</span>
+                    </div>
+                </div>
+                <!-- Item 9: Diagnóstico por Imagem (NEW) -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=400&q=80"
+                        alt="Exames e Diagnóstico" loading="lazy">
+                    <div class="overlay">
+                        <i data-lucide="sparkles"></i>
+                        <span>Diagnóstico</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas <span class="highlight">Frequentes</span></h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quais convênios vocês aceitam?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Atualmente trabalhamos com atendimento particular e reembolso assistido. Entre em
+                            contato para saber mais sobre as facilidades de pagamento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como funciona o banho ozonizado?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O banho ozonizado utiliza água com ozônio para combater bactérias, fungos e
+                            inflamações, além de promover relaxamento e bem-estar para o pet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        É necessário agendar horário?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim, trabalhamos com horário marcado para garantir que cada pet receba atenção
+                            exclusiva e sem pressa. Você pode agendar pelo WhatsApp.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Vocês fazem cirurgias complexas?
+                        <i data-lucide="chevron-down" class="faq-icon"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Realizamos diversos procedimentos cirúrgicos e contamos com especialistas parceiros
+                            para casos de alta complexidade, garantindo a melhor estrutura.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn btn-breathe"
+        aria-label="Fale conosco no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="#FFFFFF">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+        <span class="sr-only">Fale conosco no WhatsApp</span>
+    </a>
+    </div>
+    </div>
+
+    <!-- Location Section -->
+    <section id="localizacao">
+        <div class="container">
+            <div class="location-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Onde <span class="highlight">Estamos</span></h2>
+                    <p class="contact-desc">Venha nos visitar! Estamos localizados em um ponto de fácil acesso com
+                        estacionamento próprio.</p>
+
+                    <ul class="contact-list">
+                        <li>
+                            <i data-lucide="map-pin"></i>
+                            <div>
+                                <strong>Endereço</strong>
+                                <p>Rua dos bichinhos, 123 - Vila Madalena, São Paulo - SP</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="phone"></i>
+                            <div>
+                                <strong>Telefone</strong>
+                                <p>(11) 99999-9999 / (11) 3333-3333</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="mail"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contato@mundobicho.com.br</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i data-lucide="clock"></i>
+                            <div>
+                                <strong>Horário</strong>
+                                <p>Seg - Sex: 8h às 20h<br>Sáb: 9h às 18h</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="mail"></i></a>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197576288647!2d-46.658763584407!3d-23.561349584682973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1626123456789!5m2!1spt-BR!2sbr"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-content">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="./src/logo-laranja.webp" alt="Mundo Bicho Logo">
+                    <span>Mundo Bicho</span>
+                </div>
+                <p>Cuidado, amor e responsabilidade para o seu melhor amigo.</p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Links Rápidos</h3>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#faq">Dúvidas</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Emergência?</h3>
+                <p>Ligue agora para nosso plantão:</p>
+                <a href="tel:+5511999999999" class="emergency-btn">
+                    <i data-lucide="phone"></i> (11) 99999-9999
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 Clínica Veterinária Mundo Bicho. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
