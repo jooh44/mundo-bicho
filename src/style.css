@@ -2,15 +2,16 @@
 :root {
     /* Colors */
     --primary: #F78543;
-    /* Lighter Orange Requested */
+    --primary-light: rgba(247, 133, 67, 0.15);
     --secondary: #7ED6F7;
-    /* Light Blue */
     --blue-brand: #4AA3D9;
-    /* Estimated Blue from print/user desc */
+    --blue-light: rgba(74, 163, 217, 0.15);
     --text-dark: #2C3E50;
     --text-light: #7F8C8D;
     --white: #FFFFFF;
     --bg-light: #F8F9FA;
+    --success: #22C55E;
+    --success-light: rgba(34, 197, 94, 0.15);
 
     /* Fonts */
     --font-main: 'Raleway', sans-serif;
@@ -487,14 +488,11 @@ img {
 
     .hero-mascot {
         max-height: 450px;
-        /* Slightly larger */
         width: auto;
         object-fit: contain;
         display: block;
-        /* Remove inline gap */
-        vertical-align: bottom;
-        /* Ensure no ghost space */
     }
+
 
     /* Header Mobile */
     #mobile-menu-btn {
@@ -603,7 +601,7 @@ img {
 /* Service Cards (Base Style) */
 .service-card {
     background: var(--white);
-    padding: 32px;
+    padding: 40px 32px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     text-align: center;
@@ -612,115 +610,55 @@ img {
     overflow: hidden;
     cursor: pointer;
     z-index: 1;
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
-/* Service Card Interactive States */
-/* Background Image Layer (Hidden by default) */
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    opacity: 0;
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    z-index: -1;
-    border-radius: 20px;
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* Overlay for Text Contrast on Hover */
-.service-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Stronger gradient for better readability */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    z-index: -1;
-    border-radius: 20px;
+/* Card Icon Styling */
+.card-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    transition: all 0.3s ease;
 }
 
-/* Hover States */
-.service-card:hover::before {
-    opacity: 1;
-    transform: scale(1.1);
+.card-icon svg,
+.card-icon i {
+    width: 32px;
+    height: 32px;
 }
 
-.service-card:hover::after {
-    opacity: 1;
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 12px;
 }
 
-.service-card:hover h3,
-.service-card:hover p {
-    color: #fff;
-    /* make text white */
-    position: relative;
-    z-index: 2;
+.service-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Service Card Hover - Float Effect */
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(247, 133, 67, 0.1);
 }
 
 .service-card:hover .card-icon {
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-    color: #fff;
-    transform: scale(1.1);
-    /* Slightly enlarge icon for effect */
-}
-
-/* Specific Background Images (Placeholders - No Text to avoid clash) */
-.service-card:nth-child(1)::before {
-    /* Random Dog */
-    background-image: url('https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=400&q=80');
-}
-
-.service-card:nth-child(2)::before {
-    /* Syringe/medical abstract or Dog */
-    background-image: url('https://images.unsplash.com/photo-1599443015574-be5fe8a05783?auto=format&fit=crop&w=400&q=80');
-}
-
-.service-card:nth-child(3)::before {
-    /* Surgery/Vet */
-    background-image: url('https://images.unsplash.com/photo-1532009324734-20a7a5813719?auto=format&fit=crop&w=400&q=80');
-}
-
-.service-card:nth-child(4)::before {
-    /* Bath/Grooming */
-    background-image: url('https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&fit=crop&w=400&q=80');
-}
-
-/* Card CTA Button (Hidden until hover) */
-.btn-card-cta {
-    display: inline-block;
-    margin-top: 16px;
-    padding: 10px 24px;
-    background-color: var(--primary);
-    color: var(--white);
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: 700;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.3s ease 0.1s;
-    /* Slight delay */
-    position: relative;
-    z-index: 2;
-}
-
-.service-card:hover .btn-card-cta {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.btn-card-cta:hover {
-    background-color: var(--white);
-    color: var(--primary);
+    transform: scale(1.05);
 }
 
 /* Highlight Card (Banho Ozonizado) */
@@ -731,7 +669,7 @@ img {
 }
 
 .highlight-card .card-icon {
-    background-color: transparent;
+    background-color: var(--blue-light);
     /* Light Blue Bg Removed */
     color: var(--blue-brand);
 }
@@ -777,7 +715,8 @@ img {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.1fr 1fr;
+    /* More space for photo */
     gap: 60px;
     align-items: center;
     margin-bottom: 80px;
@@ -785,7 +724,7 @@ img {
 
 .about-photo {
     width: 100%;
-    max-width: 350px;
+    /* Removed small max-width constraint */
     border-radius: 24px;
     /* Rounded Rectangle */
     border: 5px solid #fff;
@@ -1141,20 +1080,20 @@ img {
     background: #fff;
 }
 
+/* Gallery Grid */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 24px;
     grid-auto-flow: dense;
-    /* Helps fill gaps */
 }
 
 .gallery-item {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    height: 300px;
-    /* Fixed height for uniformity */
+    aspect-ratio: 3 / 4;
+    /* Portrait 540x720 */
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -1163,7 +1102,7 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 /* Hover Zoom Effect */
@@ -1171,43 +1110,12 @@ img {
     transform: scale(1.1);
 }
 
-/* Overlay Effect */
-.gallery-item .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(4px);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: #fff;
-}
-
-.gallery-item:hover .overlay {
-    opacity: 1;
-}
-
-.gallery-item .overlay i {
-    width: 32px;
-    height: 32px;
-    margin-bottom: 8px;
-    color: var(--primary);
-    /* Orange accent */
-}
-
-.gallery-item .overlay span {
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-
-/* Large Item (Spans 2 cols on Desktop) */
+/* Landscape Item (Spans 2 cols on Desktop) */
 @media (min-width: 768px) {
-    .gallery-item.large {
+    .gallery-item.landscape {
         grid-column: span 2;
+        aspect-ratio: 16 / 9;
+        /* Landscape Ratio */
     }
 }
 
