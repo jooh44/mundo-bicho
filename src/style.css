@@ -629,7 +629,43 @@ img {
     border-radius: 16px;
     background-color: var(--primary-light);
     color: var(--primary);
+    color: var(--primary);
     transition: all 0.3s ease;
+}
+
+/* Color Variants for Icons */
+.card-icon.blue {
+    background-color: #E0F2FE;
+    color: #0284C7;
+}
+
+.card-icon.red {
+    background-color: #FEE2E2;
+    color: #DC2626;
+}
+
+.card-icon.green {
+    background-color: #DCFCE7;
+    color: #16A34A;
+}
+
+.card-icon.purple {
+    background-color: #F3E8FF;
+    color: #9333EA;
+}
+
+.card-icon.indigo {
+    background-color: #E0E7FF;
+    color: #4F46E5;
+}
+
+.google-logo {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    opacity: 0.8;
 }
 
 .card-icon svg,
