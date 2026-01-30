@@ -665,7 +665,7 @@ img {
     right: 24px;
     width: 24px;
     height: 24px;
-    opacity: 0.8;
+    opacity: 1;
 }
 
 .card-icon svg,
@@ -1014,6 +1014,8 @@ img {
     max-width: 380px;
     white-space: normal;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    /* Added context for absolute logo */
 }
 
 .testi-card:hover {
