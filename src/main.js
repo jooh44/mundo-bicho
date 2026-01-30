@@ -1,6 +1,6 @@
 import './style.css';
 
-import { createIcons, MapPin, FileBadge2, Stethoscope, Syringe, Scissors, Sparkles, Check, ShieldCheck, HandCoins, Heart, PawPrint, GraduationCap, Star, Award, Clock, ChevronDown, Quote, Smile, Activity, Instagram, Facebook, Mail, Phone } from 'lucide';
+import { createIcons, MapPin, FileBadge2, Stethoscope, Syringe, Scissors, Sparkles, Check, ShieldCheck, HandCoins, Heart, PawPrint, GraduationCap, Star, Award, Clock, ChevronDown, Quote, Smile, Activity, Instagram, Facebook, Mail, Phone, ScanLine, HeartPulse, Bone, Droplet } from 'lucide';
 
 console.log('Mundo Bicho - Layout Updated');
 
@@ -29,7 +29,12 @@ createIcons({
     Instagram,
     Facebook,
     Mail,
-    Phone
+    Mail,
+    Phone,
+    ScanLine,
+    HeartPulse,
+    Bone,
+    Droplet
   }
 });
 
